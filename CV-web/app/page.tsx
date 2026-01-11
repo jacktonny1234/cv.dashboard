@@ -18,7 +18,7 @@ export default function Home() {
               Empowering the Future of Computer Vision
             </h1>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              At FourCV, we are dedicated to pioneering advancements in computer vision technology, transforming industries and enhancing the way we interact with the world through innovative solutions.
+              At CV.Dashboard, we are dedicated to pioneering advancements in computer vision technology, transforming industries and enhancing the way we interact with the world through innovative solutions.
             </p>
             <Button size="lg" className="bg-indigo-600 hover:bg-indigo-700">
               Contact Us
@@ -125,7 +125,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-gray-800 p-6 rounded-lg">
               <p className="text-gray-300 mb-4">
-                "FourCV has transformed our operations with their innovative computer vision solutions. Their expertise and commitment to our success have been invaluable."
+                "CV.Dashboard has transformed our operations with their innovative computer vision solutions. Their expertise and commitment to our success have been invaluable."
               </p>
               <div className="flex items-center">
                 <img
@@ -142,7 +142,7 @@ export default function Home() {
 
             <div className="bg-gray-800 p-6 rounded-lg">
               <p className="text-gray-300 mb-4">
-                "The team at FourCV was exceptional from start to finish. They understood our needs and delivered a solution that exceeded our expectations."
+                "The team at CV.Dashboard was exceptional from start to finish. They understood our needs and delivered a solution that exceeded our expectations."
               </p>
               <div className="flex items-center">
                 <img

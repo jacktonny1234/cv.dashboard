@@ -6,9 +6,31 @@ from utils import getfilepath
 yolo_v1 = Blueprint(
     'yolo_v1', 'yolo_v1', url_prefix='/api/v1/yolo')
 
-@yolo_v1.route('/', methods=['POST'])
+@yolo_v1.route('/xx', methods=['POST'])
+def yolo_test():
+    print("xxxx")
+
+@yolo_v1.route('/', methods=['POST', 'GET'])
 def yolo():
+    print("=" * 50)
+    print("YOLO endpoint called")
+    print(f"Request method: {request.method}")
+    print(f"Request URL: {request.url}")
+    print(f"Request headers: {dict(request.headers)}")
+    print(f"Request content type: {request.content_type}")
+    print("=" * 50)
+    
+    if request.method == 'OPTIONS':
+        print("OPTIONS request received")
+        return jsonify({'status': 'ok'}), 200
+    
     post_data = request.get_json()
+    print("POST data received:", post_data)
+    
+    if post_data is None:
+        print("ERROR: No JSON data received in request")
+        return jsonify({'error': 'No JSON data received'}), 400
+    
     try:
         if 'model' in post_data:
             model = post_data['model']
@@ -31,6 +53,7 @@ def yolo():
                 classes = param['classes']
             if 'stream' in param:
                 stream = param['stream']
+                
             return  jsonify(yolo_predict(model, filepath, batch, max_det, classes, stream)), 200
     except Exception as e:
         return jsonify({'error': str(e)}), 400

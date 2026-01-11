@@ -168,7 +168,7 @@ export default function TestModel({ params }: { params: Promise<{ modelId: strin
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <Brain className="h-8 w-8 text-indigo-600" />
-              <span className="ml-2 text-xl font-bold">FourCV</span>
+              <span className="ml-2 text-xl font-bold">CV.Dashboard</span>
             </div>
             <Button asChild variant="ghost">
               <Link href="/introduce">Back to Models</Link>
