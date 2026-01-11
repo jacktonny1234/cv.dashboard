@@ -1,3 +1,6 @@
+// Declare OpenCV as a global variable (loaded via script tag)
+declare const cv: any;
+
 // Function to process images with YOLO detection results
 export function processImageWithYOLO(model: string, imageElement: HTMLImageElement, yoloResult: any, video_ratio:number, size_ratio:number) {
     let ret = null;

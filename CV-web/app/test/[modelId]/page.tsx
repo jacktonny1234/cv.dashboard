@@ -73,8 +73,14 @@ export default function TestModel({ params }: { params: Promise<{ modelId: strin
     setIsProcessing(true);
 
     let i = new Image();
-    i.src = selectedImage;
-    i.onload = function(){
+    if (selectedImage) {
+      i.src = selectedImage;
+    } else {
+      setIsProcessing(false);
+      alert("No image selected");
+      return;
+    }
+    i.onload = function() {
       let img_ratio = i.width / i.height;
 
       let size_ratio = 1;
